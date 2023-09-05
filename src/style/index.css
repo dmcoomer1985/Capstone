@@ -182,3 +182,19 @@ html {
   text-align: center;
 }
 
+.nav-item {
+  padding: 3em;
+}
+
+.nav-item > * {
+  padding: 2em;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: purple;
+  
+}
+
+.product-img {
+  height: 100px;
+  width: 100px;
+}

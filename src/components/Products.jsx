@@ -29,7 +29,7 @@ export default function ProductList() {
               <p>price:{product.price}</p>
               <p>title:{product.title}</p>
               <p>description: {product.description}</p>
-              <p>image: {product.image}</p>
+              <img className="product-img" src= {product.image} />
               </div>
             );
           })}
