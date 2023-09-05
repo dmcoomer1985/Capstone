@@ -1,9 +1,7 @@
-export default function Products() {
-  return <h1>Products</h1>;
-}
+
 import { useEffect, useState } from "react";
 
-function ProductList() {
+export default function ProductList() {
   // State which includes a products array
   const [products, setProducts] = useState([]);
 
@@ -13,7 +11,7 @@ function ProductList() {
       const response = await fetch("https://fakestoreapi.com/products");
       const responseJson = await response.json();
       console.log(responseJson)
-      setProducts(responseJson.results);
+      setProducts(responseJson);
     };
     fetchProducts();
   }, []);
@@ -26,8 +24,13 @@ function ProductList() {
         <div>
           {" "}
           {products.map((product) => {
-            return (
-              <div style={{ backgroundColor: "grey" }} key={products.url} />
+            return ( <div>
+              <div style={{ backgroundColor: "grey" }} key={products.url}/>
+              <p>price:{product.price}</p>
+              <p>title:{product.title}</p>
+              <p>description: {product.description}</p>
+              <p>image: {product.image}</p>
+              </div>
             );
           })}
         </div>

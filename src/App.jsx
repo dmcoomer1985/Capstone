@@ -4,7 +4,7 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Register from  './components/Register'
 import NavBar from './components/NavBar'
-import Products from './components/Products'
+import ProductList from './components/Products'
 
 export default function App() {
   return (
@@ -15,8 +15,8 @@ export default function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/products" element={<Products />} />
+            {/* <Route path="/register" element={<Register />} /> */}
+            <Route path="/products" element={<ProductList />} />
             
         </Routes>
     </div>
