@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import image from "../Assets/Welcome-to-All-Express-Shoppin-8-27-2023.jpg";
-//import {ReactComponent as Brand} from "../Assets/Free_Sample_By_Wix.jpg";
+import Brand from "../Assets/Free_Sample_By_Wix.jpg";
 
 // const Navbar = () => {
 //     return (
@@ -61,19 +61,26 @@ function NavBar(args) {
   return (
     <div>
       
-      <Navbar {...args}>
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+      <Navbar color="dark" dark {...args}>
+        <NavbarBrand href="/"><img
+        alt="logo"
+        src={Brand}
+        style={{
+          height: 100,
+          width: 100
+        }}
+      /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto bg-light" navbar>
+          <Nav className="me-auto" navbar>
             <NavItem className="nav-item">
               <NavLink  to="/">Home</NavLink>
               {/* <NavLink to="/signup">Sign Up</NavLink> */}
               <NavLink to="/products">Products</NavLink>
 
-              {/* <NavLink to="/about">About</NavLink> */}
+             <NavLink to="/about">About</NavLink> 
 
-              {/* <NavLink to="/cart">Cart</NavLink> */}
+               <NavLink to="/cart">Cart</NavLink> 
 
               <NavLink to="/login">Login</NavLink>
 

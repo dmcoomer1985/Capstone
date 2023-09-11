@@ -1,7 +1,7 @@
  function Login() {
     return (
         <div class="login-box">
-        <h2>Log In</h2>
+        <h2> Log In</h2>
         <form>
           <div class="user-box">
             <input type="text" name="" required="" />
