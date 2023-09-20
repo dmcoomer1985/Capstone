@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 
+
 export default function ProductList() {
   // State which includes a products array
   const [products, setProducts] = useState([]);
@@ -123,10 +124,13 @@ export default function ProductList() {
           {products.map((product) => {
             return ( <div>
               <div style={{ backgroundColor: "grey" }} key={products.url}/>
+
               <p>price:{product.price}</p>
               <p>title:{product.title}</p>
               <p>description: {product.description}</p>
+              <button>Add to Cart</button>
               <img className="product-img" src= {product.image} />
+             
               </div>
             );
           })}

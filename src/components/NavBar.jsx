@@ -80,11 +80,11 @@ function NavBar(args) {
 
              <NavLink to="/about">About</NavLink> 
 
-               <NavLink to="/cart">Cart</NavLink> 
-
               <NavLink to="/login">Login</NavLink>
 
               <NavLink to="/register">Register</NavLink>
+
+              <NavLink to="/cart">Cart</NavLink> 
             </NavItem>
           </Nav>
         </Collapse>
