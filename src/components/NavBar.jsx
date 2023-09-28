@@ -60,31 +60,30 @@ function NavBar(args) {
 
   return (
     <div>
-      
       <Navbar color="dark" dark {...args}>
-        <NavbarBrand href="/"><img
-        alt="logo"
-        src={Brand}
-        style={{
-          height: 100,
-          width: 100
-        }}
-      /></NavbarBrand>
+        <NavbarBrand href="/">
+          <img
+            alt="logo"
+            src={Brand}
+            style={{
+              height: 100,
+              width: 100,
+            }}
+          />
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem className="nav-item">
-              <NavLink  to="/">Home</NavLink>
+              <NavLink to="/">Home</NavLink>
               {/* <NavLink to="/signup">Sign Up</NavLink> */}
               <NavLink to="/products">Products</NavLink>
-
-             <NavLink to="/about">About</NavLink> 
 
               <NavLink to="/login">Login</NavLink>
 
               <NavLink to="/register">Register</NavLink>
 
-              <NavLink to="/cart">Cart</NavLink> 
+              <NavLink to="/cart">Cart</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
